@@ -11,11 +11,12 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://docs.saturdayglory.com',
-  baseUrl: '/',
+  url: 'https://benchwork-studios.github.io',
+  baseUrl: '/saturday-glory-docs/',
 
   organizationName: 'Benchwork-Studios',
   projectName: 'saturday-glory-docs',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
