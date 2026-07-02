@@ -3,13 +3,17 @@ sidebar_position: 3
 title: Cloudflare Tunnel
 ---
 
-# Cloudflare Tunnel
+# Exposing Your Server: Cloudflare Tunnel
 
-Cloudflare Tunnel gives your server a public HTTPS URL without opening inbound ports on your router. The `cloudflared` container makes an outbound connection to Cloudflare's network; traffic enters through Cloudflare and exits to your container — all encrypted, no firewall rules needed.
+This is one way to make the Saturday Glory server reachable from the internet. Cloudflare Tunnel is recommended for commissioners running the server at home — it gives you a public HTTPS URL without opening any inbound ports on your router.
+
+The `cloudflared` container makes an outbound connection to Cloudflare's network. Traffic from coaches enters through Cloudflare and exits to your container — all encrypted, no firewall rules needed.
+
+Looking for other options? See [Alternative Hosting →](./alternative-hosting)
 
 ## Prerequisites
 
-- A domain managed by Cloudflare (any plan, free works)
+- A domain managed by Cloudflare (free plan is fine)
 - A Cloudflare account
 
 ## 1. Create the tunnel
