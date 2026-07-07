@@ -20,16 +20,13 @@ cd saturday-glory-server
 cp .env.example .env
 ```
 
-Open `.env` and set your commissioner token:
+Open `.env` and set your commissioner token for League 1:
 
 ```bash
 # Generate with: openssl rand -hex 32
-COMMISSIONER_TOKEN=your_secret_token_here
+COMMISSIONER_TOKEN_1=your_secret_token_here
 
 # Optional — defaults shown
-PORT=8080
-DB_PATH=/data/league.db
-WEB_DIR=/web
 TOKEN_POLICY=carryOver
 LOG_LEVEL=info
 ```
@@ -54,7 +51,7 @@ docker compose logs -f
 You should see:
 
 ```
-server-1  | Saturday Glory League Server listening on :8080
+league-server-1-1  | Saturday Glory League Server listening on :8080
 ```
 
 Check the health endpoint:

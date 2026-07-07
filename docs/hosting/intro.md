@@ -59,4 +59,5 @@ Once the container is running on your machine, you choose how to make it reachab
 - [Cloudflare Tunnel →](./cloudflare-tunnel) — HTTPS without opening ports (recommended for home servers)
 - [Alternative Hosting →](./alternative-hosting) — all other exposure options
 - [Connecting the Mac App →](./connecting-mac-app)
+- [Multiple Leagues →](./multiple-leagues) — running more than one league from the same machine
 - [Environment Variable Reference →](./env-reference)

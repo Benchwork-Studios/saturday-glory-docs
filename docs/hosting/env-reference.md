@@ -15,21 +15,19 @@ cp .env.example .env
 
 | Variable | Default | Required | Description |
 |----------|---------|----------|-------------|
-| `PORT` | `8080` | No | Internal container port. Change if 8080 conflicts with something else on your host. |
-| `DB_PATH` | `/data/league.db` | No | Path to the SQLite database file inside the container. Must be inside the `/data` volume so it survives container rebuilds. |
-| `WEB_DIR` | `/web` | No | Path to the web portal static files inside the container. Do not change. |
-| `COMMISSIONER_TOKEN` | *(auto-generated)* | Recommended | The secret token the Mac app uses for all sync and admin calls. Generate with `openssl rand -hex 32`. If omitted, one is generated at startup and stored in the database — retrieve it with `GET /api/auth/commissioner`. |
-| `TOKEN_POLICY` | `carryOver` | No | Controls what happens to coach tokens at the end of each season. `carryOver` — coaches keep their tokens and reconnect automatically. `reset` — tokens are invalidated at offseason; coaches must rejoin with a new join code. |
+| `COMMISSIONER_TOKEN_1` | *(auto-generated)* | Recommended | Secret token the Mac app uses for all sync and admin calls for **League 1**. Generate with `openssl rand -hex 32`. If omitted, one is generated at startup — retrieve it with `GET /api/auth/commissioner`. |
+| `COMMISSIONER_TOKEN_2` | *(auto-generated)* | Only if running League 2 | Same as above, for **League 2**. Leave blank if you are only running one league. |
+| `TOKEN_POLICY` | `carryOver` | No | Controls what happens to coach tokens at the end of each season. `carryOver` — coaches keep their tokens and reconnect automatically. `reset` — tokens are invalidated at offseason; coaches must rejoin with a new join code. Applies to all league instances. |
 | `CLOUDFLARE_TUNNEL_TOKEN` | — | Only with Cloudflare overlay | The token from your Cloudflare tunnel dashboard. Only needed when running with `docker-compose.cloudflare.yml`. |
-| `LOG_LEVEL` | `info` | No | Logging verbosity. `debug` \| `info` \| `warn` \| `error`. Use `debug` to see every request during setup; switch to `info` or `warn` in production. |
+| `LOG_LEVEL` | `info` | No | Logging verbosity. `debug` \| `info` \| `warn` \| `error`. Use `debug` to see every request during setup; switch to `info` or `warn` in production. Applies to all league instances. |
 
 ## Example `.env`
 
 ```bash
-PORT=8080
-DB_PATH=/data/league.db
-WEB_DIR=/web
-COMMISSIONER_TOKEN=a1b2c3d4e5f6...  # openssl rand -hex 32
+# League tokens — generate each with: openssl rand -hex 32
+COMMISSIONER_TOKEN_1=a1b2c3d4e5f6...
+COMMISSIONER_TOKEN_2=f6e5d4c3b2a1...  # leave blank if not running a second league
+
 TOKEN_POLICY=carryOver
 CLOUDFLARE_TUNNEL_TOKEN=eyJhIjoiMT...
 LOG_LEVEL=info

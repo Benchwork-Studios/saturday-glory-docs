@@ -5,13 +5,16 @@ title: Backup & Restore
 
 # Backup & Restore
 
-All league data lives in a single SQLite file inside the `league_data` Docker volume. Backups are a file copy.
+All league data lives in a single SQLite file inside its Docker volume. Backups are a file copy.
 
 ## Backup
 
 ```bash
-# Copy the database out of the container to your current directory
-docker compose cp server:/data/league.db ./league-backup-$(date +%Y%m%d).db
+# League 1
+docker compose cp league-server-1:/data/league1.db ./league1-backup-$(date +%Y%m%d).db
+
+# League 2 (if running)
+docker compose cp league-server-2:/data/league2.db ./league2-backup-$(date +%Y%m%d).db
 ```
 
 Run this before upgrades or at the end of each season.
@@ -22,11 +25,11 @@ Run this before upgrades or at the end of each season.
 # Stop the server first
 docker compose down
 
-# Copy your backup into the volume
+# Restore League 1
 docker run --rm \
-  -v saturday-glory-server_league_data:/data \
+  -v saturday-glory-server_league1_data:/data \
   -v $(pwd):/backup \
-  alpine cp /backup/league-backup-20260101.db /data/league.db
+  alpine cp /backup/league1-backup-20260101.db /data/league1.db
 
 # Start the server again
 docker compose -f docker-compose.yml -f docker-compose.cloudflare.yml up -d
@@ -37,7 +40,7 @@ docker compose -f docker-compose.yml -f docker-compose.cloudflare.yml up -d
 For a nightly backup via cron, add this to your crontab (`crontab -e`):
 
 ```bash
-0 3 * * * cd /path/to/saturday-glory-server && docker compose cp server:/data/league.db /backups/league-$(date +\%Y\%m\%d).db
+0 3 * * * cd /path/to/saturday-glory-server && docker compose cp league-server-1:/data/league1.db /backups/league1-$(date +\%Y\%m\%d).db
 ```
 
 ## Viewing the database directly
@@ -45,9 +48,10 @@ For a nightly backup via cron, add this to your crontab (`crontab -e`):
 If you need to inspect the raw data:
 
 ```bash
+# League 1
 docker run --rm -it \
-  -v saturday-glory-server_league_data:/data \
-  keinos/sqlite3 sqlite3 /data/league.db
+  -v saturday-glory-server_league1_data:/data \
+  keinos/sqlite3 sqlite3 /data/league1.db
 ```
 
 Useful queries:
