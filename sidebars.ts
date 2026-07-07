@@ -13,6 +13,7 @@ const sidebars: SidebarsConfig = {
         'hosting/connecting-mac-app',
         'hosting/backup-restore',
         'hosting/upgrading',
+        'hosting/multiple-leagues',
         'hosting/env-reference',
         'hosting/alternative-hosting',
       ],
