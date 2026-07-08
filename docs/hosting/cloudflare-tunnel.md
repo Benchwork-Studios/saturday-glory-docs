@@ -35,7 +35,7 @@ While still in the tunnel config:
    - **Subdomain:** `league` (gives you `league.yourdomain.com`)
    - **Domain:** your Cloudflare-managed domain
    - **Service type:** `HTTP`
-   - **URL:** `server:8080`
+   - **URL:** `league-server-1:8080`
 4. Save
 
 Cloudflare creates the DNS record automatically.
@@ -61,9 +61,9 @@ curl https://league.yourdomain.com/api/health
 
 The web portal is at `https://league.yourdomain.com` — coaches can join from any browser.
 
-## Updating the URL in the Mac app
+## Adding the league to the Mac app
 
-In the Mac app: **Settings** → **Multiplayer** → **League Server** → enter `https://league.yourdomain.com`.
+Open Saturday Glory → **League** → **Add League** → enter your display name, `https://league.yourdomain.com` as the Server URL, and your `COMMISSIONER_TOKEN_1` value as the Commissioner Token → **Connect**.
 
 ## Troubleshooting
 
@@ -71,9 +71,9 @@ In the Mac app: **Settings** → **Multiplayer** → **League Server** → enter
 - Check that `CLOUDFLARE_TUNNEL_TOKEN` is set correctly in `.env`
 - Make sure you're using the token from the Cloudflare dashboard (not an API key)
 
-**`server-1` shows "port already in use"**
-- Another process is using port 8080. Change `PORT` in `.env` and update the service URL in your Cloudflare tunnel config to match.
+**`league-server-1-1` shows "port already in use"**
+- Another process is using port 8080. Edit the host port in `docker-compose.yml` and update the service URL in your Cloudflare tunnel config to match.
 
 **Coaches can reach the portal but the Mac app can't connect**
-- Confirm the URL in Mac app Settings matches exactly (no trailing slash, HTTPS)
-- Check `docker compose logs server` for the connection attempt
+- Confirm the URL in the Mac app's League Picker matches exactly (no trailing slash, HTTPS)
+- Check `docker compose logs league-server-1` for the connection attempt
