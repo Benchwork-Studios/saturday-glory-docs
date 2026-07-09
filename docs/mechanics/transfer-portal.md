@@ -7,6 +7,10 @@ title: Transfer Portal
 
 The transfer portal opens during the offseason and allows college players to move between programs with immediate eligibility.
 
+:::note Season 1
+The transfer portal has no entries in the first season of a new league. Portal entries are generated from game history (playing time, team performance) which does not exist until a full season has been played. The portal populates automatically from Season 2 onward.
+:::
+
 ## Portal window
 
 The portal window runs for **8 weeks** during the offseason — shorter than the recruiting contact period. Coaches pursue portal players alongside regular recruiting during this window.

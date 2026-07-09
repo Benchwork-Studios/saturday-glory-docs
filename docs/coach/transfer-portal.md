@@ -7,6 +7,10 @@ title: Transfer Portal
 
 The transfer portal allows players to move between programs between seasons. As a coach, you can both pursue incoming transfers and have players on your roster enter the portal.
 
+:::note Season 1
+The transfer portal is inactive in the first season of a new league. Portal activity is generated from game history — playing time data, team performance, and player satisfaction — none of which exists until a full season has been played. From Season 2 onward the portal populates automatically at the start of the offseason phase.
+:::
+
 ## How the transfer portal works
 
 During the offseason, eligible players from other programs may enter the transfer portal. Portal players are immediately eligible at their new school — no sit-out year required.
