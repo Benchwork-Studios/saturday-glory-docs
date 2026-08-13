@@ -28,6 +28,21 @@ Each position shows:
 
 Depth charts are also managed in the Mac app and are read-only in the web portal.
 
+### Automate Depth Chart
+
+:::info Coming Soon
+This feature is planned but not yet available. Details below describe how it will work once shipped.
+:::
+
+Depth Chart will offer two levels of automation:
+
+- **Automate this round** — a one-time action that resets your depth chart order for the current week, then reverts to manual next week.
+- **Automatic** — a persistent toggle that keeps your depth chart auto-set every week until you turn it back off.
+
+**How it chooses:** automated depth chart ordering slots the highest-overall-rated available player at each position, ahead of the current backup/starter assignments.
+
+The Automatic toggle will be available on both the web portal and the Mac app, and can be switched off at any time with a single click — no confirmation required.
+
 ## Player Attributes by Position
 
 Every player is evaluated across a set of attributes specific to their position. These attributes roll up into the player's **Overall Rating** and drive the qualitative scouting analysis shown on each depth chart row.

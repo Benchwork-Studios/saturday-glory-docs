@@ -59,3 +59,18 @@ Use the filter bar to narrow the prospect board:
 ## Signing Day
 
 At the end of the recruiting period, prospects decide where to commit based on accumulated interest, program prestige, and position need. Recruits who committed to your program are added to your roster for the next season.
+
+## Automate Recruiting
+
+:::info Coming Soon
+This feature is planned but not yet available. Details below describe how it will work once shipped.
+:::
+
+If you'd rather not spend AP by hand every week, Recruiting will offer two levels of automation:
+
+- **Automate this round** — a one-time action that spends this week's AP for you, then reverts to manual next week.
+- **Automatic** — a persistent toggle that keeps Recruiting on auto-pilot every week until you turn it back off.
+
+**How it chooses:** automated recruiting pursues the highest-rated available prospects. Team position need is **not** a factor — it will chase the best talent on the board regardless of what your roster is short on. If you want recruiting targeted at specific needs, keep it in manual mode.
+
+The Automatic toggle will be available on both the web portal and the Mac app, and can be switched off at any time with a single click — no confirmation required.

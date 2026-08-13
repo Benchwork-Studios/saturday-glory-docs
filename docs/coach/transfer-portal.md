@@ -44,3 +44,18 @@ All transfer portal players in Saturday Glory are immediately eligible — there
 | **Timeline** | Throughout the season and offseason | Offseason only |
 | **Decision speed** | Slower — Signing Day commitment | Faster — shorter portal window |
 | **Eligibility** | First-year players (FR) | Immediate eligibility |
+
+## Automate Portal Recruiting
+
+:::info Coming Soon
+This feature is planned but not yet available. Details below describe how it will work once shipped.
+:::
+
+Like Recruiting, the Transfer Portal will support two levels of automation:
+
+- **Automate this round** — a one-time action that spends this week's portal pursuits for you, then reverts to manual next week.
+- **Automatic** — a persistent toggle that keeps portal pursuits on auto-pilot every week of the portal window until you turn it back off.
+
+**How it chooses:** automated portal recruiting pursues the highest-rated available portal entrants. Team position need is **not** a factor. If you want portal pursuits targeted at specific needs, keep it in manual mode.
+
+The Automatic toggle will be available on both the web portal and the Mac app, and can be switched off at any time with a single click — no confirmation required.
