@@ -47,15 +47,15 @@ All transfer portal players in Saturday Glory are immediately eligible — there
 
 ## Automate Portal Recruiting
 
-:::info Coming Soon
-This feature is planned but not yet available. Details below describe how it will work once shipped.
+Like Recruiting, the Transfer Portal supports two levels of automation, in the Automation bar at the top of the page (web) or the Automation section of the Portal hub (Mac app):
+
+- **Automate This Round** — a one-time button that spends this week's portal pursuits for you, then reverts to manual next week.
+- **Automatic** — a persistent toggle that keeps portal pursuits on auto-pilot every week of the portal window until you turn it back off. While Automatic is on, the one-time button is hidden.
+
+**How it chooses:** automated portal recruiting pursues the highest-rated available portal entrants by overall rating — portal players' ratings are fully known, so there's no hidden-talent question here the way there is with recruits. Team position need is **not** a factor. If you want portal pursuits targeted at specific needs, keep it in manual mode.
+
+:::note Shared AP pool
+Recruiting and Portal draw from the same weekly AP budget. If you have both set to Automatic, the two automations split that pool between them the same way manual spending across both pages would.
 :::
 
-Like Recruiting, the Transfer Portal will support two levels of automation:
-
-- **Automate this round** — a one-time action that spends this week's portal pursuits for you, then reverts to manual next week.
-- **Automatic** — a persistent toggle that keeps portal pursuits on auto-pilot every week of the portal window until you turn it back off.
-
-**How it chooses:** automated portal recruiting pursues the highest-rated available portal entrants. Team position need is **not** a factor. If you want portal pursuits targeted at specific needs, keep it in manual mode.
-
-The Automatic toggle will be available on both the web portal and the Mac app, and can be switched off at any time with a single click — no confirmation required.
+Turning Automatic off takes a single click — no confirmation dialog. The toggle is scoped to your own team; other coaches and the commissioner can't see whether you have it on.

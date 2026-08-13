@@ -30,18 +30,14 @@ Depth charts are also managed in the Mac app and are read-only in the web portal
 
 ### Automate Depth Chart
 
-:::info Coming Soon
-This feature is planned but not yet available. Details below describe how it will work once shipped.
-:::
+Depth Chart offers two levels of automation, in the Automation bar at the top of the page (web) or the Automation section of the Depth Chart view (Mac app — only shown on your own team's chart, not when viewing an opponent's):
 
-Depth Chart will offer two levels of automation:
-
-- **Automate this round** — a one-time action that resets your depth chart order for the current week, then reverts to manual next week.
-- **Automatic** — a persistent toggle that keeps your depth chart auto-set every week until you turn it back off.
+- **Automate This Round** — a one-time button that resets your depth chart order for the current week, then reverts to manual next week.
+- **Automatic** — a persistent toggle that keeps your depth chart auto-set every week until you turn it back off. While Automatic is on, the one-time button is hidden.
 
 **How it chooses:** automated depth chart ordering slots the highest-overall-rated available player at each position, ahead of the current backup/starter assignments.
 
-The Automatic toggle will be available on both the web portal and the Mac app, and can be switched off at any time with a single click — no confirmation required.
+Turning Automatic off takes a single click — no confirmation dialog. The toggle is scoped to your own team; other coaches and the commissioner can't see whether you have it on.
 
 ## Player Attributes by Position
 
